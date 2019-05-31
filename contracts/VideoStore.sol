@@ -71,6 +71,20 @@ contract VideoStore {
         // string[] tags = generateTags(_tags);
 
     }
+    
+    function getVideosByUser(string memory _email) 
+    public 
+    view
+    returns (uint[] memory ids) {
+        uint length = 0;
+        for(uint i = 0;i < videoListCount;i++) {
+            Video memory foo = videoList[i];
+            if (compareStrings(foo.userEmail, _email)) {
+               ids[length] = i;
+               length++;
+            }
+        }
+    }
 
     function getVideoListCount()
     public
@@ -147,5 +161,14 @@ contract VideoStore {
 //     // separate using delimiter ;
 
 //   }
+    function compareStrings(string memory one, string memory two)
+    internal
+    pure
+    returns (bool)
+    {
+
+        return keccak256(abi.encodePacked(one)) == keccak256(abi.encodePacked(two));
+
+    }
 
 }

@@ -9,10 +9,12 @@ contract UserStore {
         bool isReal; // To check if the user actually exists.
         string[] subscribers;
         uint videoCount;
+        uint[] videos;
         string[] subscribedTo;
         uint subscribedToCount;
         uint subscribersCount;
     }
+
 
     mapping (string=>User) userMapping;
     string[] emails;
@@ -51,6 +53,7 @@ contract UserStore {
         }
         return false;
     }
+
 
     function checkUserNameExistence(string memory _username)
     internal

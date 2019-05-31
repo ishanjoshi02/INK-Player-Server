@@ -1,0 +1,26 @@
+{
+  "name": "inkserver",
+  "version": "1.0.0",
+  "description": "Server Side Code for INK Player. Contains `solidity` contract",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "truffle-hdwallet-provider": "^1.0.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishanjoshi02/INK-Player-Server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ishanjoshi02/INK-Player-Server/issues"
+  },
+  "homepage": "https://github.com/ishanjoshi02/INK-Player-Server#readme"
+}
